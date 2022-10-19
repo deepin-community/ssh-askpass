@@ -1,0 +1,21 @@
+Source: ssh-askpass
+Section: net
+Priority: optional
+Maintainer: Philip Hands <phil@hands.com>
+Build-Depends: debhelper (>= 10), libx11-dev, libxt-dev, x11proto-core-dev, pkg-config
+Standards-Version: 4.5.1
+Homepage: http://www.jmknoble.net/software/x11-ssh-askpass/
+Rules-Requires-Root: no
+Vcs-Git: https://salsa.debian.org/debian/ssh-askpass.git
+Vcs-Browser: https://salsa.debian.org/debian/ssh-askpass
+
+Package: ssh-askpass
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: under X, asks user for a passphrase for ssh-add
+ This is Jim Knoble's implementation of the ssh-askpass program, originally
+ called x11-ssh-askpass upstream.  It is built on low-level X11 libraries,
+ and therefore has minimal dependencies.
+ .
+ Other ssh-askpass programs are available, some of which may integrate
+ better into various desktop environments.

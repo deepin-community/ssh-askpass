@@ -1,0 +1,168 @@
+ssh-askpass (1:1.2.4.1-13) unstable; urgency=medium
+
+  * the brief switch to source format 1.0 in versions -11 & -12 was an
+    prompted by a misconfiguration that was preventing local builds
+    working properly.
+
+    Having discovered that, I decided to revert to the old setup while
+    keeping the changes I wanted.
+
+    This has at least had the positive side-effect of introducing git
+    history for all previous debian releases (since I needed a
+    strategy=ours merge to get back on track).
+
+ -- Philip Hands <phil@hands.com>  Sat, 28 Aug 2021 06:02:43 +0200
+
+ssh-askpass (1:1.2.4.1-12) unstable; urgency=medium
+
+  * Reinstate debian patches (dropped in error in previous release)
+
+ -- Philip Hands <phil@hands.com>  Fri, 27 Aug 2021 23:07:35 +0200
+
+ssh-askpass (1:1.2.4.1-11) unstable; urgency=medium
+
+  * add Vcs-* and update standards version, along with a few minor
+    changes, some to make dgit cheerful
+
+ -- Philip Hands <phil@hands.com>  Fri, 27 Aug 2021 22:08:51 +0200
+
+ssh-askpass (1:1.2.4.1-10) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Rewrite build system as autoconf (Closes: #873807)
+
+  [ Philip Hands ]
+  * improve the package description (Closes: #568724)
+  * drop the x11- from the name in the man page (Closes: #577485)
+
+ -- Philip Hands <phil@hands.com>  Sat, 02 Sep 2017 01:14:40 +0200
+
+ssh-askpass (1:1.2.4.1-9) unstable; urgency=low
+
+  * switch to 3.0 (quilt) source format
+
+ -- Philip Hands <phil@hands.com>  Mon, 23 Nov 2009 02:08:30 +0000
+
+ssh-askpass (1:1.2.4.1-8) unstable; urgency=low
+
+  * update debian/rules to dh's zen guru (CDDB-killer) style
+    very cool -- thanks Joey
+  * other minor tidying of debian/*
+  * move source into git, and use git-buildpackage for the first time
+
+ -- Philip Hands <phil@hands.com>  Thu, 15 Oct 2009 10:32:25 +0100
+
+ssh-askpass (1:1.2.4.1-7) unstable; urgency=low
+
+  * get rid of unneeded debian/dirs (Closes: #408343)
+  * drop debian/examples as it contained duplicated files from the upstream
+  * update build-depends
+
+ -- Philip Hands <phil@hands.com>  Fri, 06 Jun 2008 15:14:29 +0100
+
+ssh-askpass (1:1.2.4.1-6.1) unstable; urgency=medium
+
+  * NMU 
+  * Install man page into proper directory. Patch provided by 
+    Vincent Crevot. Closes: #382114
+  * Fix path to application resource in man page to conform to X.org
+    layout
+  * Remove install-stamp on clean as well
+
+ -- Helge Kreutzmann <debian@helgefjell.de>  Sat,  2 Sep 2006 18:13:36 +0200
+
+ssh-askpass (1:1.2.4.1-6) unstable; urgency=low
+
+  * comment out a few irrelevant dh_whatever calls in debian/rules
+
+ -- Philip Hands <phil@hands.com>  Mon,  7 Aug 2006 09:46:04 +0100
+
+ssh-askpass (1:1.2.4.1-5) unstable; urgency=low
+
+  * use upstream man page, rather than mine, and actually include it
+    in the package this time (Closes: 366675)
+  * Also update the description in the control file (Closes: 273946)
+  * Upgrade to policy 3.7.0.0
+  [ credit to Helge Kreutzmann, for suggesting these changes -- thanks ]
+
+ -- Philip Hands <phil@hands.com>  Mon,  7 Aug 2006 09:31:19 +0100
+
+ssh-askpass (1:1.2.4.1-4) unstable; urgency=low
+
+  * Remove outdated package references from README.Debian (closes: #273946)
+
+ -- Philip Hands <phil@hands.com>  Mon,  9 Jan 2006 10:48:23 +0000
+
+ssh-askpass (1:1.2.4.1-3.1) unstable; urgency=low
+
+  * Non-maintainer upload to help xlibs-dev transition.
+  * debian/control: Replace xlibs-dev build-dep. (Closes: #347065)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Fri, 20 Jan 2006 18:40:11 +0100
+
+ssh-askpass (1:1.2.4.1-3) unstable; urgency=low
+
+  * fix out of date URL in man page
+
+ -- Philip Hands <phil@hands.com>  Mon,  8 Mar 2004 22:01:28 +0000
+
+ssh-askpass (1:1.2.4.1-2) unstable; urgency=low
+
+  * erm, really get rid of the non-US thing, and try that upload again.
+    Doh!
+  
+ -- Philip Hands <phil@hands.com>  Mon,  8 Mar 2004 20:23:10 +0000
+
+ssh-askpass (1:1.2.4.1-1) unstable; urgency=low
+
+  * New upstream release
+  * move from non-US/main to main (closes: #206664)
+
+ -- Philip Hands <phil@hands.com>  Mon,  1 Dec 2003 23:28:26 +0000
+
+ssh-askpass (1:1.2.0-2.1) unstable; urgency=low
+
+  * Non-Maintainer Upload
+  * Changed distclean in squeakyclean in Imakefile (closes: #114918)
+  * control: Added Build-Depends (closes: #89745)
+  * control: Raised Standards-Version to 3.5.2 (no change required)
+  * Marked /etc/X11/app-defaults/SshAskpass as conffile
+
+ -- Guillaume Morin <gemorin@debian.org>  Sat, 26 Jan 2002 01:25:01 +0100
+
+ssh-askpass (1:1.2.0-2) unstable; urgency=low
+
+  * make postinst tidy up defective alternatives
+
+ -- Philip Hands <phil@hands.com>  Thu, 15 Mar 2001 02:05:55 +0100
+
+ssh-askpass (1:1.2.0-1) unstable; urgency=low
+
+  * New upstream release (closes: #80104, #86291, #68837)
+
+ -- Philip Hands <phil@hands.com>  Wed, 14 Mar 2001 03:08:25 +0000
+
+ssh-askpass (1:1.0.1-1) unstable; urgency=low
+
+  * New Upstream Release (closes: #68837)
+  * start using cvs-buildpackage
+
+ -- Philip Hands <phil@hands.com>  Sun, 10 Sep 2000 02:01:45 +0100
+
+ssh-askpass (1:1.0-1) unstable frozen; urgency=low
+
+  * New Upstream Release (one trivial Makefile change)
+  * While nothing important changed in this version, it does close
+    a couple of trivial bugs, so should be OK for frozen, although
+    it doesn't really matter if it's not included
+  * add manpage (closes: #39469, #57475)
+
+ -- Philip Hands <phil@hands.com>  Thu, 13 Apr 2000 17:15:37 +0100
+
+ssh-askpass (1:0.99-1) unstable; urgency=low
+
+  * Initial Release.
+  
+ -- Philip Hands <phil@hands.com>  Wed, 29 Dec 1999 17:22:50 +0000
+
+

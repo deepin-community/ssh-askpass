@@ -1,0 +1,18 @@
+Description: Tweak paths to suit debian policy
+Author: Philip Hands <phil@hands.com>
+
+Last-Update: 2017-09-01
+
+--- a/x11-ssh-askpass.man.in
++++ b/x11-ssh-askpass.man.in
+@@ -276,8 +276,8 @@
+ the font to use for this button label.
+ .El
+ .Sh FILES
+-.Bl -tag -width "/usr/X11R6/lib/X11/app-defaults/SshAskpass" -compact
+-.It Pa /usr/X11R6/lib/X11/app-defaults/SshAskpass
++.Bl -tag -width "/etc/X11/app-defaults/SshAskpass" -compact
++.It Pa /etc/X11/app-defaults/SshAskpass
+ .El
+ .Sh SEE ALSO
+ .Xr X 1 ,

@@ -1,0 +1,45 @@
+Description: ensure that the man page talks about ssh-askpass
+ Despite the fact that this is called x11-ssh-askpass upstream, we hide that
+ binary under /lib and then offer it as an alternative with a name of
+ ssh-askpass in /usr/bin, so we might as well make the manpage talk about
+ the name the user actually sees.
+Author: Philip Hands <phil@hands.com>
+Bug-Debian: https://bugs.debian.org/577485
+Last-Update: 2017-09-01
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -5,6 +5,6 @@
+ PKG_CHECK_MODULES([XT],[xt])
+ PKG_CHECK_MODULES([SM],[sm])
+ PKG_CHECK_MODULES([ICE],[ice])
+-AC_SUBST(NAME,[x11-ssh-askpass])
++AC_SUBST(NAME,[ssh-askpass])
+ AC_CONFIG_FILES([Makefile x11-ssh-askpass.man])
+ AC_OUTPUT()
+--- a/x11-ssh-askpass.man.in
++++ b/x11-ssh-askpass.man.in
+@@ -284,8 +284,13 @@
+ .Xr ssh 1 ,
+ .Xr ssh-agent 1
+ .Sh LICENSE
++[This program is actually called 
++.Nm x11-ssh-askpass
++upstream,
++hence the use of that name in this section]
++.Pp
+ Some portions of
+-.Nm
++.Nm x11-ssh-askpass
+ are derived directly or indirectly
+ from portions of xscreensaver by Jamie Zawinski <jwz@jwz.org>, while
+ others are original works.
+@@ -304,7 +309,7 @@
+ .Pp
+ The remaining portions fall under the following copyright and license:
+ .Pp
+-.Nm
++.Nm x11-ssh-askpass
+ by Jim Knoble 
+ .Aq jmknoble@pobox.com
+ Copyright \(co 1999,2000,2001 Jim Knoble

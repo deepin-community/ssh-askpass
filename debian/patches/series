@@ -1,0 +1,3 @@
+debian_paths
+autotools.patch
+drop-x11-from-name.patch
